@@ -12,10 +12,13 @@ public class LombokApplication {
 		SpringApplication.run(LombokApplication.class, args);
 		System.out.println("Hello");
 
-		User obj = new User();
-		obj.setFirstName("Matt");
+		User obj = new User((long) 1,"matt","smith");
+
 		System.out.println("hi:" + obj.getFirstName());
+		System.out.println("toString: " + obj.toString());
 		System.out.println("w: " + obj.hashCode());
+
+		System.out.println(obj.saySomething());
 
 	}
 
